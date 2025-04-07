@@ -1,0 +1,23 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "row_count": 6,
+  "column_count": 6,
+  "columns": [
+    "name",
+    "url",
+    "source_url",
+    "source_title",
+    "source_reliability",
+    "description"
+  ],
+  "output_paths": {
+    "csv": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.csv",
+    "json": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.json",
+    "excel": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.xlsx"
+  },
+  "formats_saved": [
+    "csv",
+    "json",
+    "excel"
+  ]
+}

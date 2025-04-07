@@ -1,0 +1,56 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "execution_time": 77.88233208656311,
+  "dataset_info": {
+    "query": "List of top 50 AI tools with their features and pricing",
+    "row_count": 6,
+    "column_count": 6,
+    "columns": [
+      "name",
+      "url",
+      "source_url",
+      "source_title",
+      "source_reliability",
+      "description"
+    ],
+    "output_paths": {
+      "csv": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.csv",
+      "json": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.json",
+      "excel": "list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.xlsx"
+    },
+    "formats_saved": [
+      "csv",
+      "json",
+      "excel"
+    ]
+  },
+  "agent_execution_plan": {
+    "interpreted_query": "A list of the top 50 AI software tools ranked by popularity or usage, including details on their individual features and pricing information",
+    "required_fields": [
+      "AI Tool Name",
+      "Features",
+      "Pricing"
+    ],
+    "execution_order": [
+      "QueryAnalyzer",
+      "SearchAgent",
+      "ExtractionAgent",
+      "DataProcessorAgent",
+      "ValidationAgent"
+    ],
+    "agent_instructions": {
+      "QueryAnalyzer": "Interpret the user query to identify the top 50 AI tools, their features and pricing details as the required data fields.",
+      "SearchAgent": "Find reliable sources that provide information about the top 50 AI tools. Focus on tech review sites, official product websites and AI technology forums.",
+      "ExtractionAgent": "Extract the names of the AI tools, their features and pricing details from the identified sources. Ensure the data is in a structured format.",
+      "DataProcessorAgent": "Process the extracted data by removing duplicates, normalizing the pricing information into a common currency, and structuring the features into a consistent, easily readable format.",
+      "ValidationAgent": "Validate the extracted data for accuracy and completeness. Cross-verify the data with multiple sources. Enrich the dataset by finding and filling any missing values for the required fields."
+    }
+  },
+  "execution_summary": {
+    "query_analysis": "The user is looking for a list of the top 50 AI tools currently available in the market, along with detailed information about their features and pricing.",
+    "sources_found": 10,
+    "data_extracted": 6,
+    "data_processed": 0,
+    "data_quality": 0
+  }
+}

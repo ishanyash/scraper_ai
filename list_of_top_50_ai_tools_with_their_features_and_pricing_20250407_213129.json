@@ -1,0 +1,50 @@
+[
+  {
+    "name":"Jobs",
+    "url":"\/jobs",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":null
+  },
+  {
+    "name":"Companies",
+    "url":"\/companies",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":null
+  },
+  {
+    "name":"Remote",
+    "url":"\/jobs\/remote",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":null
+  },
+  {
+    "name":"Articles",
+    "url":"\/tech-topics",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":null
+  },
+  {
+    "name":"Best Places To Work",
+    "url":"https:\/\/builtin.com\/awards\/us\/2025\/best-places-to-work",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":null
+  },
+  {
+    "name":"My items",
+    "url":"\/auth\/login?destination=\/home\/jobs\/saved",
+    "source_url":"https:\/\/builtin.com\/artificial-intelligence\/ai-companies-roundup",
+    "source_title":"70 Artificial Intelligence (AI) Companies to Know | Built In",
+    "source_reliability":"medium",
+    "description":"My items"
+  }
+]

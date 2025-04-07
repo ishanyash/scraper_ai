@@ -53,3 +53,40 @@
 2025-04-07 21:31:11,004 - Agent.SearchAgent - INFO - Validating source: https://builtin.com/artificial-intelligence/ai-companies-roundup
 2025-04-07 21:31:12,473 - Agent.SearchAgent - INFO - Validating source: https://www.datamation.com/artificial-intelligence/top-artificial-intelligence-software.html
 2025-04-07 21:31:15,237 - Agent.SearchAgent - INFO - Validating source: https://www.analyticsinsight.net/top-10-latest-artificial-intelligence-tools-in-2020/
+2025-04-07 21:31:16,631 - Agent.SearchAgent - INFO - Found 2 accessible sources out of 10 total sources
+2025-04-07 21:31:16,632 - CommandCenter - INFO - Completed execution of SearchAgent
+2025-04-07 21:31:16,632 - CommandCenter - INFO - Executing agent: ExtractionAgent
+2025-04-07 21:31:16,632 - Agent.ExtractionAgent - INFO - Starting data extraction from sources
+2025-04-07 21:31:16,632 - Agent.ExtractionAgent - INFO - Processing source: https://builtin.com/artificial-intelligence/ai-companies-roundup
+2025-04-07 21:31:16,696 - Agent.ExtractionAgent - INFO - Processing source: https://www.datamation.com/artificial-intelligence/top-artificial-intelligence-software.html
+2025-04-07 21:31:16,712 - Agent.ExtractionAgent - INFO - Calling AI with prompt: 
+            Source URL: https://www.datamation.com/artificial-intelligence/top-artificial-intellige...
+2025-04-07 21:31:24,880 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:31:24,882 - Agent.ExtractionAgent - WARNING - Failed to parse JSON from response
+2025-04-07 21:31:24,883 - Agent.ExtractionAgent - INFO - Extraction completed: 6 unique items from 2 sources
+2025-04-07 21:31:24,883 - CommandCenter - INFO - Completed execution of ExtractionAgent
+2025-04-07 21:31:24,883 - CommandCenter - INFO - Executing agent: DataProcessorAgent
+2025-04-07 21:31:24,883 - Agent.DataProcessorAgent - INFO - DataProcessorAgent received 6 items to process
+2025-04-07 21:31:24,883 - Agent.DataProcessorAgent - INFO - Processing data for fields: ['tool_name', 'tool_features', 'tool_pricing', 'tool_ranking', 'tool_provider']
+2025-04-07 21:31:24,884 - Agent.DataProcessorAgent - INFO - Sending 6 items to AI for processing (out of 6 total)
+2025-04-07 21:31:24,884 - Agent.DataProcessorAgent - INFO - Calling AI to process data
+2025-04-07 21:31:24,884 - Agent.DataProcessorAgent - INFO - Calling AI with prompt: 
+        Additional Instructions: Process the extracted data by removing duplicates, normalizing the...
+2025-04-07 21:31:29,741 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:31:29,746 - Agent.DataProcessorAgent - WARNING - Failed to parse JSON from response
+2025-04-07 21:31:29,746 - Agent.DataProcessorAgent - INFO - AI processing response received
+2025-04-07 21:31:29,747 - Agent.DataProcessorAgent - WARNING - No JSON array found in response string
+2025-04-07 21:31:29,747 - Agent.DataProcessorAgent - INFO - Standardized 0 items to 0 items
+2025-04-07 21:31:29,747 - CommandCenter - INFO - Completed execution of DataProcessorAgent
+2025-04-07 21:31:29,747 - CommandCenter - INFO - Executing agent: ValidationAgent
+2025-04-07 21:31:29,747 - Agent.ValidationAgent - INFO - ValidationAgent received 0 items to validate
+2025-04-07 21:31:29,747 - Agent.ValidationAgent - ERROR - No processed data to validate
+2025-04-07 21:31:29,748 - CommandCenter - INFO - Completed execution of ValidationAgent
+2025-04-07 21:31:29,748 - MultiAgentSystem - INFO - Using validated data: 0 items
+2025-04-07 21:31:29,748 - MultiAgentSystem - INFO - Using processed data: 0 items
+2025-04-07 21:31:29,748 - MultiAgentSystem - INFO - Using extracted data: 6 items
+2025-04-07 21:31:29,756 - DatasetGenerator - INFO - Generated CSV dataset: list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.csv
+2025-04-07 21:31:29,758 - DatasetGenerator - INFO - Generated JSON dataset: list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.json
+2025-04-07 21:31:31,860 - DatasetGenerator - INFO - Generated Excel dataset: list_of_top_50_ai_tools_with_their_features_and_pricing_20250407_213129.xlsx
+2025-04-07 21:31:31,863 - MultiAgentSystem - INFO - Execution report saved to: execution_report_20250407_213131.json
+2025-04-07 21:31:31,864 - MultiAgentSystem - INFO - Multi-agent system completed in 77.88 seconds with 6 data items
