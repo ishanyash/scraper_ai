@@ -1,0 +1,82 @@
+2025-04-07 21:26:58,118 - MultiAgentSystem - INFO - Starting multi-agent system for query: List of top 50 AI tools with their features and pricing
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Registered agent: QueryAnalyzer
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Registered agent: SearchAgent
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Registered agent: ExtractionAgent
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Registered agent: DataProcessorAgent
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Registered agent: ValidationAgent
+2025-04-07 21:26:58,118 - CommandCenter - INFO - Command Center calling AI with prompt: 
+        User Query: List of top 50 AI tools with their features and pricing
+        
+        Create...
+2025-04-07 21:27:12,398 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:27:12,416 - CommandCenter - INFO - Created execution plan: {
+  "interpreted_query": "A list of the top 50 artificial intelligence tools, including their features and pricing",
+  "required_fields": [
+    "Tool Name",
+    "Features",
+    "Pricing"
+  ],
+  "execution_order": [
+    "QueryAnalyzer",
+    "SearchAgent",
+    "ExtractionAgent",
+    "DataProcessorAgent",
+    "ValidationAgent"
+  ],
+  "agent_instructions": {
+    "QueryAnalyzer": "Identify the key components of the query. These are the 'top 50 AI tools', 'their features', and 'their pricing'.",
+    "SearchAgent": "Search for reliable sources that provide information on the top 50 AI tools, their features, and their pricing. These might include AI technology blogs, reviews, and comparison websites. Avoid sources that do not seem reputable or that do not provide all the required information.",
+    "ExtractionAgent": "Extract the name of each AI tool, its features, and its pricing from the identified sources. Ensure that the extracted data matches the required fields identified by the QueryAnalyzer.",
+    "DataProcessorAgent": "Structure the extracted data into a coherent dataset. Each entry should contain the name of an AI tool, its features, and its pricing. Remove any duplicate entries and sort the entries based on the popularity or ranking of the AI tools.",
+    "ValidationAgent": "Check the dataset for accuracy and completeness. Each entry should have a tool name, list of features, and pricing. Cross-check the information with multiple sources to ensure its validity. Enrich the dataset by adding any additional relevant information found during the validation process."
+  }
+}
+2025-04-07 21:27:12,416 - CommandCenter - INFO - Executing agent: QueryAnalyzer
+2025-04-07 21:27:12,416 - Agent.QueryAnalyzer - INFO - Calling AI with prompt: 
+        Query: List of top 50 AI tools with their features and pricing
+        
+        Additional ...
+2025-04-07 21:27:28,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:27:28,304 - CommandCenter - INFO - Completed execution of QueryAnalyzer
+2025-04-07 21:27:28,305 - CommandCenter - INFO - Executing agent: SearchAgent
+2025-04-07 21:27:28,305 - Agent.SearchAgent - INFO - Search agent received query: A list of the top 50 artificial intelligence tools, including their features and pricing
+2025-04-07 21:27:28,305 - Agent.SearchAgent - INFO - Calling AI with prompt: 
+        Query: A list of the top 50 artificial intelligence tools, including their features and pri...
+2025-04-07 21:27:50,052 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:27:50,056 - Agent.SearchAgent - INFO - Validating source: https://www.g2.com/categories/ai-platforms
+2025-04-07 21:27:51,237 - Agent.SearchAgent - INFO - Validating source: https://www.capterra.com/artificial-intelligence-software/
+2025-04-07 21:27:52,388 - Agent.SearchAgent - INFO - Validating source: https://www.trustradius.com/machine-learning
+2025-04-07 21:27:53,533 - Agent.SearchAgent - INFO - Validating source: https://towardsdatascience.com/top-ai-tools-and-platforms-4bfb6b0a5af5
+2025-04-07 21:27:55,322 - Agent.SearchAgent - INFO - Validating source: https://www.softwareadvice.com/ai/
+2025-04-07 21:27:56,473 - Agent.SearchAgent - INFO - Validating source: https://www.predictiveanalyticstoday.com/top-artificial-intelligence-platforms/
+2025-04-07 21:27:57,623 - Agent.SearchAgent - INFO - Validating source: https://www.datamation.com/artificial-intelligence/ai-companies.html
+2025-04-07 21:27:59,419 - Agent.SearchAgent - INFO - Validating source: https://builtin.com/artificial-intelligence/ai-companies-startups-to-know
+2025-04-07 21:28:00,815 - Agent.SearchAgent - INFO - Validating source: https://www.getapp.com/artificial-intelligence-software/
+2025-04-07 21:28:01,953 - Agent.SearchAgent - INFO - Validating source: https://www.technologyadvice.com/artificial-intelligence/
+2025-04-07 21:28:03,886 - Agent.SearchAgent - INFO - Found 0 accessible sources out of 10 total sources
+2025-04-07 21:28:03,887 - CommandCenter - INFO - Completed execution of SearchAgent
+2025-04-07 21:28:03,887 - CommandCenter - INFO - Executing agent: ExtractionAgent
+2025-04-07 21:28:03,887 - Agent.ExtractionAgent - INFO - Starting data extraction from sources
+2025-04-07 21:28:03,888 - Agent.ExtractionAgent - INFO - Extraction completed: 0 unique items from 0 sources
+2025-04-07 21:28:03,888 - CommandCenter - INFO - Completed execution of ExtractionAgent
+2025-04-07 21:28:03,888 - CommandCenter - INFO - Executing agent: DataProcessorAgent
+2025-04-07 21:28:03,888 - Agent.DataProcessorAgent - INFO - DataProcessorAgent received 0 items to process
+2025-04-07 21:28:03,888 - Agent.DataProcessorAgent - ERROR - No extracted data to process
+2025-04-07 21:28:03,888 - CommandCenter - INFO - Completed execution of DataProcessorAgent
+2025-04-07 21:28:03,889 - CommandCenter - INFO - Executing agent: ValidationAgent
+2025-04-07 21:28:03,889 - Agent.ValidationAgent - INFO - ValidationAgent received 0 items to validate
+2025-04-07 21:28:03,889 - Agent.ValidationAgent - ERROR - No processed data to validate
+2025-04-07 21:28:03,889 - CommandCenter - INFO - Completed execution of ValidationAgent
+2025-04-07 21:28:03,890 - MultiAgentSystem - INFO - Using validated data: 0 items
+2025-04-07 21:28:03,890 - MultiAgentSystem - INFO - Using processed data: 0 items
+2025-04-07 21:28:03,890 - MultiAgentSystem - INFO - Using extracted data: 0 items
+2025-04-07 21:28:03,890 - MultiAgentSystem - ERROR - No data collected. Check agent results for details.
+2025-04-07 21:28:03,890 - MultiAgentSystem - ERROR - Agent result keys: dict_keys(['query', 'plan', 'QueryAnalyzer', 'SearchAgent', 'ExtractionAgent', 'DataProcessorAgent', 'ValidationAgent'])
+2025-04-07 21:28:03,891 - MultiAgentSystem - ERROR - plan keys: dict_keys(['interpreted_query', 'required_fields', 'execution_order', 'agent_instructions'])
+2025-04-07 21:28:03,891 - MultiAgentSystem - ERROR - QueryAnalyzer keys: dict_keys(['interpreted_query', 'main_entities', 'required_data_fields', 'potential_sources', 'ambiguities', 'assumptions', 'search_keywords'])
+2025-04-07 21:28:03,891 - MultiAgentSystem - ERROR - SearchAgent keys: dict_keys(['sources', 'search_strategies', 'backup_sources', 'accessible_sources_count', 'total_sources_suggested', 'source_confidence'])
+2025-04-07 21:28:03,891 - MultiAgentSystem - ERROR - ExtractionAgent keys: dict_keys(['extracted_data', 'total_items', 'sources_processed', 'extraction_success_rate'])
+2025-04-07 21:28:03,892 - MultiAgentSystem - ERROR - DataProcessorAgent keys: dict_keys(['error', 'processed_data'])
+2025-04-07 21:28:03,892 - MultiAgentSystem - ERROR - ValidationAgent keys: dict_keys(['error', 'validated_data'])
+2025-04-07 21:28:03,893 - MultiAgentSystem - INFO - Execution report saved to: execution_report_20250407_212803.json
+2025-04-07 21:28:03,894 - MultiAgentSystem - INFO - Multi-agent system completed in 65.77 seconds with 0 data items

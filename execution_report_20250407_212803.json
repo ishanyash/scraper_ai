@@ -1,0 +1,36 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "execution_time": 65.77134013175964,
+  "dataset_info": {
+    "error": "No data collected. Check agent results for details."
+  },
+  "agent_execution_plan": {
+    "interpreted_query": "A list of the top 50 artificial intelligence tools, including their features and pricing",
+    "required_fields": [
+      "Tool Name",
+      "Features",
+      "Pricing"
+    ],
+    "execution_order": [
+      "QueryAnalyzer",
+      "SearchAgent",
+      "ExtractionAgent",
+      "DataProcessorAgent",
+      "ValidationAgent"
+    ],
+    "agent_instructions": {
+      "QueryAnalyzer": "Identify the key components of the query. These are the 'top 50 AI tools', 'their features', and 'their pricing'.",
+      "SearchAgent": "Search for reliable sources that provide information on the top 50 AI tools, their features, and their pricing. These might include AI technology blogs, reviews, and comparison websites. Avoid sources that do not seem reputable or that do not provide all the required information.",
+      "ExtractionAgent": "Extract the name of each AI tool, its features, and its pricing from the identified sources. Ensure that the extracted data matches the required fields identified by the QueryAnalyzer.",
+      "DataProcessorAgent": "Structure the extracted data into a coherent dataset. Each entry should contain the name of an AI tool, its features, and its pricing. Remove any duplicate entries and sort the entries based on the popularity or ranking of the AI tools.",
+      "ValidationAgent": "Check the dataset for accuracy and completeness. Each entry should have a tool name, list of features, and pricing. Cross-check the information with multiple sources to ensure its validity. Enrich the dataset by adding any additional relevant information found during the validation process."
+    }
+  },
+  "execution_summary": {
+    "query_analysis": "The user is looking for a list of the top 50 AI tools. For each tool, they want details on the features offered by the tool and the cost to use it.",
+    "sources_found": 10,
+    "data_extracted": 0,
+    "data_processed": 0,
+    "data_quality": 0
+  }
+}

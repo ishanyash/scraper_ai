@@ -1,0 +1,36 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "execution_time": 52.29447913169861,
+  "dataset_info": {
+    "error": "No data collected. Check agent results for details."
+  },
+  "agent_execution_plan": {
+    "interpreted_query": "A list of the top 50 Artificial Intelligence tools, along with their features and pricing details",
+    "required_fields": [
+      "Tool Name",
+      "Features",
+      "Pricing"
+    ],
+    "execution_order": [
+      "QueryAnalyzer",
+      "SearchAgent",
+      "ExtractionAgent",
+      "DataProcessorAgent",
+      "ValidationAgent"
+    ],
+    "agent_instructions": {
+      "QueryAnalyzer": "Identify and categorize the main elements of the user query: 'AI tools', 'features' and 'pricing'. The output should be a structured format that can be used by the subsequent agents.",
+      "SearchAgent": "Find reliable sources that provide information about the top 50 AI tools, their features, and pricing. Prioritize official websites and reputed technology blogs. Avoid sources that are outdated or lack transparency about their data collection methodology.",
+      "ExtractionAgent": "Extract the relevant data fields from the identified sources. The specific fields to be extracted are 'Tool Name', 'Features', and 'Pricing'. Make sure to handle any inconsistencies in how these fields are presented across different sources.",
+      "DataProcessorAgent": "Structure the extracted data into a consistent format. Each entry should represent one AI tool and should include fields for 'Tool Name', 'Features', and 'Pricing'. Cleanse the data to remove any irrelevant or duplicate information.",
+      "ValidationAgent": "Validate the extracted data for accuracy and completeness. Cross-verify the data with multiple sources when possible. Enrich the dataset by adding any additional relevant information that could be useful to the user, such as the official website of each tool."
+    }
+  },
+  "execution_summary": {
+    "query_analysis": "A list of the top 50 artificial intelligence tools, including their features and pricing information",
+    "sources_found": 3,
+    "data_extracted": 0,
+    "data_processed": 0,
+    "data_quality": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "execution_time": 51.75181984901428,
+  "dataset_info": {
+    "error": "No data collected. Check agent results for details."
+  },
+  "agent_execution_plan": {
+    "interpreted_query": "List of the top 50 artificial intelligence tools, including their features and pricing information",
+    "required_fields": [
+      "Tool Name",
+      "Features",
+      "Pricing"
+    ],
+    "execution_order": [
+      "QueryAnalyzer",
+      "SearchAgent",
+      "ExtractionAgent",
+      "DataProcessorAgent",
+      "ValidationAgent"
+    ],
+    "agent_instructions": {
+      "QueryAnalyzer": "Identify the key elements of the query, which are the top 50 AI tools, their features, and their pricing. These elements will guide the search and extraction process.",
+      "SearchAgent": "Find reliable sources that list AI tools along with their features and pricing. Focus on sources like blogs, articles, and official sites that compare and review AI tools.",
+      "ExtractionAgent": "Extract the names of AI tools, their features and pricing from the identified sources. Be sure to extract data for at least 50 tools. Avoid duplication and ensure accuracy.",
+      "DataProcessorAgent": "Structure the extracted data into a coherent format. Each entry should contain a tool name, its features, and its pricing. Remove any duplicates and irrelevant entries.",
+      "ValidationAgent": "Verify the accuracy of the extracted data. Cross-check the features and pricing of each tool with its official website or other reliable sources. Enrich the data, if possible, with additional relevant information like user reviews or ratings."
+    }
+  },
+  "execution_summary": {
+    "query_analysis": "The user is looking for a list of the top 50 Artificial Intelligence (AI) tools currently available on the market. Additionally, the user wants information about each tool's features and pricing details.",
+    "sources_found": 3,
+    "data_extracted": 0,
+    "data_processed": 0,
+    "data_quality": 0
+  }
+}

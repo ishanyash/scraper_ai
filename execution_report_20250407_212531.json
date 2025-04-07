@@ -1,0 +1,36 @@
+{
+  "query": "List of top 50 AI tools with their features and pricing",
+  "execution_time": 58.195152759552,
+  "dataset_info": {
+    "error": "No data collected. Check agent results for details."
+  },
+  "agent_execution_plan": {
+    "interpreted_query": "A list of the top 50 AI tools currently available, along with a description of their features and their pricing information",
+    "required_fields": [
+      "AI Tool Name",
+      "Features",
+      "Pricing"
+    ],
+    "execution_order": [
+      "QueryAnalyzer",
+      "SearchAgent",
+      "ExtractionAgent",
+      "DataProcessorAgent",
+      "ValidationAgent"
+    ],
+    "agent_instructions": {
+      "QueryAnalyzer": "Interpret the user query, identifying the required data fields as the names of the top 50 AI tools, their features, and their pricing information.",
+      "SearchAgent": "Search for reliable sources that provide information on the top 50 AI tools, their features, and pricing. Prioritize official websites, reputable tech blogs, and AI-related platforms.",
+      "ExtractionAgent": "Extract the names of the AI tools, their corresponding features and pricing from the identified web sources. Ensure the accuracy of the extracted data.",
+      "DataProcessorAgent": "Structure the data into a table format with columns for AI tool name, features, and pricing. Remove any duplicates and ensure the data is clean and readable.",
+      "ValidationAgent": "Validate the extracted data for each AI tool. Cross-verify the features and pricing with multiple sources to ensure accuracy. If available, enrich the dataset with additional details from official product websites or other reliable sources."
+    }
+  },
+  "execution_summary": {
+    "query_analysis": "The user is looking for a list of the top 50 tools used in artificial intelligence, along with the features of each tool and their pricing information.",
+    "sources_found": 10,
+    "data_extracted": 0,
+    "data_processed": 0,
+    "data_quality": 0
+  }
+}

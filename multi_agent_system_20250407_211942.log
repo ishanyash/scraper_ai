@@ -1,0 +1,46 @@
+2025-04-07 21:19:42,532 - MultiAgentSystem - INFO - Starting multi-agent system for query: List of top 50 AI tools with their features and pricing
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Registered agent: QueryAnalyzer
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Registered agent: SearchAgent
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Registered agent: ExtractionAgent
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Registered agent: DataProcessorAgent
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Registered agent: ValidationAgent
+2025-04-07 21:19:42,532 - CommandCenter - INFO - Command Center calling AI with prompt: 
+        User Query: List of top 50 AI tools with their features and pricing
+        
+        Create...
+2025-04-07 21:19:52,712 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:19:52,733 - CommandCenter - INFO - Created execution plan: {
+  "interpreted_query": "A list of the top 50 AI tools, along with detailed descriptions of their features and pricing",
+  "required_fields": [
+    "AI Tool Name",
+    "Features",
+    "Pricing"
+  ],
+  "execution_order": [
+    "QueryAnalyzer",
+    "SearchAgent",
+    "ExtractionAgent",
+    "DataProcessorAgent",
+    "ValidationAgent"
+  ],
+  "agent_instructions": {
+    "QueryAnalyzer": "Interpret the user's query, identify the key data fields required such as the AI tool's name, its features, and pricing.",
+    "SearchAgent": "Search for reputable sources listing AI tools. This may include industry blogs, tool comparison websites, and official websites of the AI tools.",
+    "ExtractionAgent": "Extract the needed data from the identified sources. This includes the name of the AI tool, its features, and pricing details.",
+    "DataProcessorAgent": "Structure the extracted data into a readable and usable format. Each entry should include the tool's name, a list of its features, and its pricing. Remove any duplicates and irrelevant data.",
+    "ValidationAgent": "Validate the extracted data for accuracy and completeness. Cross-check with multiple sources to ensure the information for each tool is correct, and enrich the dataset with additional details if available."
+  }
+}
+2025-04-07 21:19:52,733 - CommandCenter - INFO - Executing agent: QueryAnalyzer
+2025-04-07 21:19:52,734 - Agent.QueryAnalyzer - INFO - Calling AI with prompt: 
+        Query: List of top 50 AI tools with their features and pricing
+        
+        Additional ...
+2025-04-07 21:20:10,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:20:10,111 - CommandCenter - INFO - Completed execution of QueryAnalyzer
+2025-04-07 21:20:10,112 - CommandCenter - INFO - Executing agent: SearchAgent
+2025-04-07 21:20:10,112 - Agent.SearchAgent - INFO - Search agent received query: A list of the top 50 AI tools, along with detailed descriptions of their features and pricing
+2025-04-07 21:20:10,112 - Agent.SearchAgent - INFO - Calling AI with prompt: 
+        Query: A list of the top 50 AI tools, along with detailed descriptions of their features an...
+2025-04-07 21:20:37,244 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-07 21:20:37,246 - Agent.SearchAgent - WARNING - Failed to parse JSON from response
